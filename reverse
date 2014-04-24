@@ -1,0 +1,81 @@
+package fibonaci;
+/**
+ *
+ * @author Asisten
+ */
+public class Fibonaci {
+
+    /**
+     * @param a
+     * @param args the command line arguments
+     */
+    
+    public void fibonaci(int a){
+    System.out.println("Input : "+a);
+        int i=0;
+        int f=1;
+        int g=0;
+        if(i>a){
+            System.out.println("0");
+        }
+        else{
+            while(i<a){
+                System.out.print(" "+f);
+                f=f+g;
+                g=f-g;
+                i++;
+            }
+        }
+    }
+    
+    public void sumfibonaci(int a){
+        System.out.println("Input : "+a);
+        int i=0;
+        int f=1;
+        int g=0;
+        int temp=0;
+        if(i>a){
+            System.out.println("0");
+        }
+        else{
+            while(i<a){
+                temp=temp+f;
+                f=f+g;
+                g=f-g;
+                i++;
+                            }
+            System.out.print("jumlah : "+temp);
+        }
+    }
+    
+    public void reversefibonaci(int a){
+    System.out.println("Input : "+a);
+        int i=0;
+        int j=0;
+        int f=1;
+        int g=0;
+        if(i>a){
+            System.out.println("0");
+        }
+        else{
+            while(i<a){
+                f=f+g;
+                g=f-g;
+                i++;
+            }
+            int r=f;
+            int s=g;
+            while(j<a){
+                System.out.print(" "+s);
+                s=r-s;
+                r=r-s;
+                j++;
+            }           
+        }
+    }
+    
+    public static void main(String[] args) {
+        Fibonaci f = new Fibonaci();
+        f.reversefibonaci(7);
+    }
+}
