@@ -1,0 +1,34 @@
+package fibonaci;
+/**
+ *
+ * @author Asisten
+ */
+public class Fibonaci {
+
+    /**
+     * @param a
+     * @param args the command line arguments
+     */
+    
+    public void fibonaci(int a){
+        int i=0;
+        int f=1;
+        int g=0;
+        if(i>a){
+            System.out.println("0");
+        }
+        else{
+            while(i<a){
+                System.out.print(" "+f);
+                f=f+g;
+                g=f-g;
+                i++;
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Fibonaci f = new Fibonaci();
+        f.fibonaci(4);
+    }
+}
